@@ -1,0 +1,5 @@
+torch>=1.10
+numpy>=1.21
+tqdm>=4.64
+openai-whisper>=2024.9.30
+Levenshtein>=0.27.1
