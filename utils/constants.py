@@ -50,10 +50,10 @@ class PresetCities(Enum):
 
 class Forecast(Enum):
   DOWNPOUR = ["chubasco", "aguacero", "chaparrón", "torrencial"]
-  ELECTRICAL_STORM = ["tormenta eléctrica", "tormenta con relámpagos", "relámpagos", "trueno"]
-  RAINY = ["lluvia", "lluvioso", "llovizna", "precipitación", "aguacero leve"]
-  CLOUDY = ["nublado", "cielo nublado", "cubierto", "gris", "encapotado"]
-  PARTIAL_CLOUDINESS = ["parcialmente nublado", "parcialmente nublado", "algo nublado", "nubes dispersas"]
+  ELECTRICAL_STORM = ["tormenta", "eléctrica", "tormenta", "relámpagos", "trueno"]
+  RAINY = ["lluvia", "lluvioso", "llovizna", "precipitación", "aguacero", "leve"]
+  CLOUDY = ["nublado", "cubierto", "gris", "encapotado"]
+  PARTIAL_CLOUDINESS = ["parcialmente nublado", "algo nublado", "nubes dispersas"]
   SUNNY = ["soleado", "sol", "despejado", "cielo despejado", "día claro"]
   PARTIAL_SUNNY = ["parcialmente soleado", "parcialmente soleado", "sol con nubes", "intermitentemente soleado"]
   HIGH_SUNNY = ["muy soleado", "muy soleado", "intenso sol", "sol fuerte", "día muy claro"]

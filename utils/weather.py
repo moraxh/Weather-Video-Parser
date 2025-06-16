@@ -85,15 +85,17 @@ class WeatherFolderExtractor:
     # Remove "probabilidad de lluvia" from the text
     text = text.replace("probabilidad de lluvia", "").strip()
 
-    words = self.normalize_text(text).split()
     best_match = {'forecast': None, 'score': float('inf')}
+    words = self.normalize_text(text).split()
 
     for forecast, phrases in Forecast.__members__.items():
       for phrase in phrases.value:
-        scores = [lev(phrase, word) for word in words]
-        best_score = min(scores)
-        if best_score < best_match['score']:
-          best_match = {'forecast': forecast, 'score': best_score}
+        p_len = len(phrase.split())
+        for i in range(len(words) - p_len + 1):
+          segment = " ".join(words[i : i + p_len])
+          score = lev(phrase, segment)
+          if score < best_match['score']:
+            best_match = {'forecast': forecast, 'score': score}
 
     forecast = best_match['forecast']
     return forecast.lower()
