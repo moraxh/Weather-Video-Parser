@@ -10,7 +10,7 @@ DATA_SUBFOLDERS = os.listdir(DATA_FOLDER)
 PREFERRED_LANGUAGE = "es"
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
-model = whisper.load_model("small", device=DEVICE)
+model = whisper.load_model("turbo", device=DEVICE)
 
 class Stage(Enum):
   START     = ["buenos", "dias", "amigos", "presento", "nuevamente"]
